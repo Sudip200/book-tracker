@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import SignUpService from "../../services/signUp.service";
 import { AlteredTextField } from "./AlteredTextField/AlteredTextField";
-import { formFields } from "./SignUpFormFields";
+//import { formFields } from "./SignUpFormFields";
 
 class SignUpPage extends Component {
   state = {
@@ -43,9 +43,9 @@ class SignUpPage extends Component {
   };
 
   showPassword = () => {
-    document.getElementById("password").type = document.getElementById("password").type == "text" ? "password" : "text";
+    document.getElementById("password").type = document.getElementById("password").type === "text" ? "password" : "text";
     document.getElementById("confirmPassword").type =
-      document.getElementById("confirmPassword").type == "text" ? "password" : "text";
+      document.getElementById("confirmPassword").type === "text" ? "password" : "text";
   };
 
   render() {
